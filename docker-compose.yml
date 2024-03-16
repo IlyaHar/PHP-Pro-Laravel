@@ -4,6 +4,14 @@ services:
   my-php:
     build: .
     ports:
-      - '81:80'
+      - '${SERVER_PORT}:80'
     volumes:
       - .:/var/www/html
+    env_file:
+      - .env
+
+
+  composer:
+    image: composer:2.3
+    volumes:
+      - .:/app
