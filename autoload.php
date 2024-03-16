@@ -96,7 +96,7 @@ class Psr4AutoloaderClass
 }
 
 $autoload = new Psr4AutoloaderClass();
-$autoload->addNamespace('Hillel\\', 'src');
+$autoload->addNamespace('src\\', 'src');
 $autoload->register();
 
 
