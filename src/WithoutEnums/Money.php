@@ -1,6 +1,6 @@
 <?php
 
-namespace src\WithoutEnums;
+namespace Hillel\WithoutEnums;
 
 class Money
 {
@@ -38,11 +38,11 @@ class Money
         return $this == $money;
     }
 
-    public function add(Money $money): int|float
+    public function add(Money $money): Money
     {
         if ($this->getCurrency() != $money->getCurrency()) {
             throw new \Exception('Currency is different');
         }
-        return $this->getAmount() + $money->getAmount();
+        return new Money($this->getAmount() + $money->getAmount(), $this->currency);
     }
 }

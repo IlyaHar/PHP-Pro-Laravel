@@ -1,6 +1,6 @@
 <?php
 
-namespace src\WithEnums;
+namespace Hillel\WithEnums;
 
 enum CurrencyEnum : string
 {
